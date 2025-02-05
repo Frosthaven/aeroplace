@@ -6,8 +6,7 @@ application layouts on launch.
 ## Installation
 
 ```bash
-brew tap frosthaven/aeroplace
-brew install aeroplace
+brew install https://github.com/frosthaven/aeroplace
 ```
 
 ## Usage
