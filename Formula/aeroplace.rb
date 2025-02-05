@@ -9,7 +9,7 @@ class Aeroplace < Formula
   
   license "MIT"
 
-  depends_on "aerospace"
+  depends_on "nikitabobko/tap/aerospace"
 
   def install
     bin.install "src/run.sh" => "aeroplace"
