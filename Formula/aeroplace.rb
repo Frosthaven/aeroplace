@@ -11,6 +11,7 @@ class Aeroplace < Formula
 
   def install
     bin.install "src/run.sh" => "aeroplace"
+    chmod 0755, "#{bin}/aeroplace"
   end
 
   test do
