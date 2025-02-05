@@ -1,14 +1,34 @@
 #!/bin/bash
 
-# $1: workspace
-# $2: app_path
-# $2: title_content
+helpFunction()
+{
+   echo ""
+   echo "Usage: $0 -w workspaceID -a appPath [-t titleContent]"
+   echo -e "\t-w The ID of the workspace to move the app to (0-9,a-z)"
+   echo -e "\t-a The path to the app to open, e.g. '/Applications/Google Chrome.app'"
+   echo -e "\t-t The title content to look for, which indicates the is loaded"
+   exit 1 # Exit script after printing help
+}
 
-workspace="$1"
-app_path="$2"
+while getopts "w:a:t:" opt
+do
+   case "$opt" in
+      w ) workspace="$OPTARG" ;;
+      a ) app_path="$OPTARG" ;;
+      t ) title_content="$OPTARG" ;;
+      ? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
+   esac
+done
+
+# Print helpFunction if workspace or app_path are empty
+if [ -z "$workspace" ] || [ -z "$app_path" ]
+then
+   echo "Some or all of the parameters are empty";
+   helpFunction
+fi
+
 app_name=$(basename $app_path)
 app_name="${app_name%.*}"
-title_content="$3"
 
 open -a "$app_path"
 
