@@ -3,8 +3,6 @@
 A utility for generating deterministic [Aerospace](https://github.com/nikitabobko/AeroSpace)
 application layouts on launch.
 
-Load and modify your applications in sequence to gain repeatable layout composition between starts.
-
 THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
 
 ## Installation
