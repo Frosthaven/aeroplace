@@ -27,15 +27,16 @@ aeroplace -w `<workspace>` -a `<application>` [-t `<title>`]
     this text in its title before considering the application launched (useful
     in cases like discord which have a launch screen)
 
-*Note: This command will return the window id of the launchedlication. This
-will allow you to feed the ID into other aerospace commands if desired.*
-
 ```bash
 # Launch Slack and wait for the title to include '- Slack'
 aeroplace -w '1' -a 'Slack' -t '- Slack'
 ```
 
 ## Example
+*Note: Because `aeroplace` commands echo out the window id of the launched
+application, you can use the output of one command as the input to another.
+This is shown below, where we manipulate the Discord and Obsidian windows on
+workspace 2.*
 
 ```toml
 # aeroplace workspace composition - each workspace builds in its own
