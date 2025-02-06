@@ -33,8 +33,8 @@ aeroplace -w `<workspace>` -a `<application>` [-t `<title>` -m `<modifyCommand>`
 - modifyCommand (optional): A valid aerospace window modification, e.g. `move left`
 
 ```bash
-# Launch Slack and wait for the title to include '- Slack'
-aeroplace -w '1' -a 'Slack' -t '- Slack'
+# Launch Slack and wait for the title to include '- Slack' before joining it left
+aeroplace -w '1' -a 'Slack' -t '- Slack' -m 'join-with left'
 ```
 
 *Note: Because `aeroplace` commands echo out the window id of the launched
