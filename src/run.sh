@@ -43,11 +43,11 @@ function modifyWindow() {
   modify_command="$3"
 
   # move the window to the appropriate workspace
-  aerospace move-node-to-workspace --window-id "$app_window_id" --focus-follows-window "$workspace" > /dev/null 2>&1
+  aerospace move-node-to-workspace --window-id $app_window_id $workspace > /dev/null 2>&1
 
   # run the modify command if it exists
   if [[ ! -z "$modify_command" ]]; then
-    aerospace $modify_command --window-id "$app_window_id" > /dev/null 2>&1
+    aerospace $modify_command --window-id $app_window_id > /dev/null 2>&1
   fi
 }
 
@@ -63,14 +63,14 @@ elapsed=0
 while [[ $elapsed -lt $timeout ]]; do
 
   if [[ -z $title_content ]]; then # if title_content IS NOT provided
-    app_window_id="$(aerospace list-windows --all | grep -i $app_name | awk '{print $1}')"
+    app_window_id="$(aerospace list-windows --all | grep -i "$app_name" | awk '{print $1}')"
     if [[ ! -z "$app_window_id" ]]; then
       modifyWindow "$app_window_id" "$workspace" "$modify_command"
       echo "$app_window_id"
       break
     fi
   else # if title_content IS provided
-    title_window_id="$(aerospace list-windows --all | grep -i $app_name | grep -i $title_content | awk '{print $1}')"
+    title_window_id="$(aerospace list-windows --all | grep -i "$app_name" | grep -i "$title_content" | awk '{print $1}')"
     if [[ ! -z "$title_window_id" ]]; then
       modifyWindow "$title_window_id" "$workspace" "$modify_command"
       echo "$title_window_id"
