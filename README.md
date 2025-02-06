@@ -1,6 +1,8 @@
 # aeroplace
 
-A helper utility for generating deterministic [Aerospace](https://github.com/nikitabobko/AeroSpace)
+THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
+
+A utility for generating deterministic [Aerospace](https://github.com/nikitabobko/AeroSpace)
 application layouts on launch.
 
 ## Installation
@@ -66,9 +68,16 @@ aeroplace -w 3 -a 'ForkLift';
 ]
 ```
 
-## @todo
+## Roadmap
 
-- [x] Refactor to support named parameters
-- [ ] Add support for starting applications OR commands
-- [ ] Add parameters for move, join, and resize on new windows
-- [ ] Add support for multiple windows of the same application type
+- [x] Support getopt parameters
+- [ ] Extend parameters
+    - [ ] Add `-c` (execute command) as an alternative to `-a` (launch app)
+    - [ ] Add `-m` to move window up|down|left|right
+    - [ ] Add `-j` to join window up|down|left|right
+    - [ ] Add `-s` to smart resize up and down
+    - [ ] Add `--if-monitor` conditional flag
+    - [ ] Add `--if-network` conditional flag
+- [ ] Improve window and title detection
+    - Currently, we're grepping an entire row from `aerospace list-windows --all` for both the application and the title. We should handle this more intelligently to separate the values out before for comparison.
+    - This will allow us to consider *which* index of a window we have to handle cases where we want several windows for the same application
