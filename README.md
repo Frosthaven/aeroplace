@@ -21,26 +21,6 @@ brew update
 brew upgrade aeroplace
 ```
 
-## Usage
-
-aeroplace -w `<workspace>` -a `<application>` [-t `<title>` -m `<modifyCommand>`]
-
-- workspace: The workspace identifier to place the application in
-- application: The application name to launch
-- title (optional): If provided, the command will wait until the application has
-    this text in its title before considering the application launched (useful
-    in cases like discord which have a launch screen)
-- modifyCommand (optional): A valid aerospace window modification, e.g. `move left`
-
-```bash
-# Launch Slack and wait for the title to include '- Slack' before joining it left
-aeroplace -w '1' -a 'Slack' -t '- Slack' -m 'join-with left'
-```
-
-*Note: Because `aeroplace` commands echo out the window id of the launched
-application, you can use the output as the input to any aerospace command that
-requires `--window-id`.
-
 ## Example
 
 ```toml
