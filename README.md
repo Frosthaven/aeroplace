@@ -32,12 +32,17 @@ aeroplace -w '1' -a 'Slack' -t '- Slack'
 
 ```toml
 after-startup-command = [
-    # workspace 1 composition
-    "exec-and-forget aeroplace -w 1 -a 'Zen Browser'; aeroplace -w 1 'WezTerm'",
-    # wokspace 2 composition
-    "exec-and-forget aeroplace -w 2 -a 'Slack'; aerospace move left --window-id $(aeroplace -w 2 -a 'Discord' -t '- Discord'); aerospace move right --window-id $(aeroplace -w '2' -a 'Obsidian' -t 'Obsidian')",
-    # workspace 3 composition
-    "exec-and-forget aeroplace '3' 'Microsoft Outlook' ' • '; aeroplace '3' 'ForkLift' ''",
+# aeroplace workspace composition
+"""
+exec-and-forget \
+aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
+aeroplace -w 3 -a 'ForkLift'
+aeroplace -w 2 -a 'Slack'; \
+aerospace join left --window-id $(aeroplace -w 2 -a 'Discord' -t '- Discord'); \
+aerospace move right --window-id $(aeroplace -w 2 -a 'Obsidian' -t 'Obsidian');
+aeroplace -w 1 -a 'Zen Browser'; \
+aeroplace -w 1 -a 'WezTerm' \
+""",
 ]
 ```
 
