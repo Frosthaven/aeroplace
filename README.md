@@ -22,7 +22,7 @@ brew upgrade aeroplace
 aeroplace -w `<workspace>` -a `<application>` [-t `<title>`]
 
 - workspace: The workspace identifier to place the application in
-- application: The application name to launch (as seen in ``)
+- application: The application name to launch
 - title (optional): If provided, the command will wait until the application has
     this text in its title before considering the application launched (useful
     in cases like discord which have a launch screen)
