@@ -6,7 +6,7 @@ helpFunction()
    echo "Usage: $0 -w workspaceID -a appName [-t titleContent]"
    echo -e "\t-w The ID of the workspace to move the app to (0-9,a-z)"
    echo -e "\t-a The name of the app file to open, e.g. 'Google Chrome'"
-   echo -e "\t-t The title content to look for, which indicates the is loaded"
+   echo -e "\t-t The title content to look for, which indicates the app is loaded"
    exit 1 # Exit script after printing help
 }
 
