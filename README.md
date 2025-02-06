@@ -81,3 +81,5 @@ aeroplace -w 3 -a 'ForkLift';
 - [ ] Improve window and title detection
     - Currently, we're grepping an entire row from `aerospace list-windows --all` for both the application and the title. We should handle this more intelligently to separate the values out before for comparison.
     - This will allow us to consider *which* index of a window we have to handle cases where we want several windows for the same application
+- [ ] Add mechanism to track when all workspaces have completed
+    - thought: `aerospace await 3` would initialize and wait for 3 done events before continuing. `aerospace mark done` would increase the curent done counter by 1.
