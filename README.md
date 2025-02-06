@@ -1,6 +1,6 @@
-# aeroplace
+# AeroPlace
 
-A utility for generating deterministic [Aerospace](https://github.com/nikitabobko/AeroSpace)
+A utility for generating deterministic [AeroSpace](https://github.com/nikitabobko/AeroSpace)
 application layouts on launch.
 
 THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
