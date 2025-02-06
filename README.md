@@ -23,24 +23,25 @@ brew upgrade aeroplace
 
 ## Usage
 
-aeroplace -w `<workspace>` -a `<application>` [-t `<title>`]
+aeroplace -w `<workspace>` -a `<application>` [-t `<title>` -m `<modifyCommand>`]
 
 - workspace: The workspace identifier to place the application in
 - application: The application name to launch
 - title (optional): If provided, the command will wait until the application has
     this text in its title before considering the application launched (useful
     in cases like discord which have a launch screen)
+- modifyCommand (optional): A valid aerospace window modification, e.g. 'move left'
 
 ```bash
 # Launch Slack and wait for the title to include '- Slack'
 aeroplace -w '1' -a 'Slack' -t '- Slack'
 ```
 
-## Example
 *Note: Because `aeroplace` commands echo out the window id of the launched
-application, you can use the output of one command as the input to another.
-This is shown below, where we manipulate the Discord and Obsidian windows on
-workspace 2.*
+application, you can use the output as the input to any aerospace command that
+requires `--window-id`.
+
+## Example
 
 ```toml
 # aeroplace workspace composition - each workspace builds in its own
@@ -49,7 +50,7 @@ after-startup-command = [
 # workspace 1
 """
 exec-and-forget \
-aeroplace -w 1 -a 'Zen Browser'; \
+aeroplace -w 1 -a 'Zen Browser' -t 'Zen'; \
 aeroplace -w 1 -a 'WezTerm';
 """,
 
@@ -57,8 +58,8 @@ aeroplace -w 1 -a 'WezTerm';
 """
 exec-and-forget \
 aeroplace -w 2 -a 'Slack'; \
-aerospace join left --window-id $(aeroplace -w 2 -a 'Discord' -t 'Friends'); \
-aerospace move right --window-id $(aeroplace -w 2 -a 'Obsidian');
+aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left' \
+aeroplace -w 2 -a 'Obsidian' -m 'move right';
 """,
 
 # workspace 3
@@ -74,9 +75,7 @@ aeroplace -w 3 -a 'ForkLift';
 
 - [x] Support getopt parameters
 - [ ] Extend parameters
-    - [ ] Add `-m` to move window up|down|left|right
-    - [ ] Add `-j` to join window up|down|left|right
-    - [ ] Add `-s` to smart resize up and down
+    - [x] Add `-m` to enable modification on window creation (join-with, move, etc)
     - [ ] Add `-c` (execute command) as an alternative to `-a` (launch app)
     - [ ] Add `--if-monitor` conditional flag
     - [ ] Add `--if-network` conditional flag
