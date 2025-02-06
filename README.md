@@ -19,7 +19,16 @@ brew update
 brew upgrade aeroplace
 ```
 
-## Example
+## Usage
+
+aeroplace -w `<workspace>` -a `<application>` [-t `<title>` -m `<modifyCommand>`]
+
+- workspace: The workspace identifier to place the application in
+- application: The application name to launch
+- title (optional): If provided, the command will wait until the application has
+    this text in its title before considering the application launched (useful
+    in cases like discord which have a launch screen)
+- modifyCommand (optional): A valid aerospace window modification, e.g. `move left`
 
 ```toml
 after-startup-command = [
