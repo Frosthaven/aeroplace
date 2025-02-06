@@ -1,5 +1,5 @@
 class Aeroplace < Formula
-  desc "Helper utility for generating deterministic Aerospace application layouts at launch"
+  desc "A utility for generating deterministic Aerospace application layouts on launch."
   homepage "https://github.com/Frosthaven/aeroplace"
   url "https://github.com/Frosthaven/homebrew-aeroplace/archive/refs/tags/v0.0.8.tar.gz"
 
