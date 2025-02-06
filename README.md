@@ -25,7 +25,8 @@ brew upgrade aeroplace
 
 ```toml
 after-startup-command = [
-# aeroplace workspace composition
+# aeroplace workspace composition - we load our primary workspace last
+# so that it is easy to put the focus at the end of the load sequence
 """
 exec-and-forget \
 aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
