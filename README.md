@@ -21,16 +21,15 @@ brew upgrade aeroplace
 
 ## Usage
 
-```toml
-# aeroplace -w '<workspace>' -a '<application>' [-t '<title>' -m '<modifyCommand>']
-#
-# - workspace: The workspace identifier to place the application in
-# - application: The application name to launch
-# - title (optional): If provided, the command will wait until the application has
-#   this text in its title before considering the application launched (useful
-#   in cases like discord which have a launch screen)
-# - modifyCommand (optional): A valid aerospace window modification, e.g. `move left`
+```sh
+/opt/homebrew/bin/aeroplace -w workspaceID -a appName [-t titleContent -m modifyCommand]
+        -w The ID of the workspace to move the app to (0-9,a-z)
+        -a The name of the app file to open, e.g. 'Google Chrome'
+        -t The title content to look for, which indicates the app is loaded
+        -m A valid aerospace window modification, e.g. 'move left'
+```
 
+```toml
 after-startup-command = [
 
 # aeroplace workspace composition - we load our primary workspace last
