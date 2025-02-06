@@ -47,27 +47,16 @@ requires `--window-id`.
 # aeroplace workspace composition - each workspace builds in its own
 # parallel process
 after-startup-command = [
-# workspace 1
-"""
-exec-and-forget \
-aeroplace -w 1 -a 'Zen Browser' -t 'Zen'; \
-aeroplace -w 1 -a 'WezTerm';
-""",
-
-# workspace 2
-"""
-exec-and-forget \
-aeroplace -w 2 -a 'Slack'; \
-aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left'; \
-aeroplace -w 2 -a 'Obsidian' -m 'move right';
-""",
-
-# workspace 3
 """
 exec-and-forget \
 aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
-aeroplace -w 3 -a 'ForkLift';
-"""
+aeroplace -w 3 -a 'ForkLift'; \
+aeroplace -w 2 -a 'Slack'; \
+aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left'; \
+aeroplace -w 2 -a 'Obsidian' -m 'move right'; \
+aeroplace -w 1 -a 'Zen Browser'; \
+aeroplace -w 1 -a 'WezTerm' -m 'focus'; \
+""",
 ]
 ```
 
