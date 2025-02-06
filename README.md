@@ -9,13 +9,13 @@ THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
 
 ## Installation
 
+Install
 ```bash
 brew tap frosthaven/aeroplace
 brew install aeroplace
 ```
 
-## Updating
-
+Update
 ```bash
 brew update
 brew upgrade aeroplace
