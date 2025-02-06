@@ -44,6 +44,7 @@ aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left'; \
 aeroplace -w 2 -a 'Obsidian' -m 'move right'; \
 aeroplace -w 1 -a 'Zen Browser'; \
 aeroplace -w 1 -a 'WezTerm' -m 'focus'; \
+afplay /System/Library/Sounds/Sosumi.aiff; \
 """,
 
 ]
