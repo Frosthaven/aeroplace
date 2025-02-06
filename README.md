@@ -22,7 +22,7 @@ brew upgrade aeroplace
 ## Usage
 
 ```sh
-/opt/homebrew/bin/aeroplace -w workspaceID -a appName [-t titleContent -m modifyCommand]
+aeroplace -w workspaceID -a appName [-t titleContent -m modifyCommand]
         -w The ID of the workspace to move the app to (0-9,a-z)
         -a The name of the app file to open, e.g. 'Google Chrome'
         -t The title content to look for, which indicates the app is loaded
