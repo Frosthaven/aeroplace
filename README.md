@@ -38,18 +38,30 @@ aeroplace -w '1' -a 'Slack' -t '- Slack'
 ## Example
 
 ```toml
+# aeroplace workspace composition - each workspace builds in its own
+# parallel process
 after-startup-command = [
-# aeroplace workspace composition
+# workspace 1
+"""
+exec-and-forget \
+aeroplace -w 1 -a 'Zen Browser'; \
+aeroplace -w 1 -a 'WezTerm'
+""",
+
+# workspace 2
+"""
+exec-and-forget \
+aeroplace -w 2 -a 'Slack'; \
+aerospace join left --window-id $(aeroplace -w 2 -a 'Discord' -t '- Discord'); \
+aerospace move right --window-id $(aeroplace -w 2 -a 'Obsidian' -t 'Obsidian');
+""",
+
+# workspace 3
 """
 exec-and-forget \
 aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
 aeroplace -w 3 -a 'ForkLift'
-aeroplace -w 2 -a 'Slack'; \
-aerospace join left --window-id $(aeroplace -w 2 -a 'Discord' -t '- Discord'); \
-aerospace move right --window-id $(aeroplace -w 2 -a 'Obsidian' -t 'Obsidian');
-aeroplace -w 1 -a 'Zen Browser'; \
-aeroplace -w 1 -a 'WezTerm' \
-""",
+"""
 ]
 ```
 
