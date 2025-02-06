@@ -1,11 +1,11 @@
 class Aeroplace < Formula
   desc "Helper utility for generating deterministic Aerospace application layouts at launch"
   homepage "https://github.com/Frosthaven/aeroplace"
-  url "https://github.com/Frosthaven/homebrew-aeroplace/archive/refs/tags/v.0.0.7.tar.gz"
+  url "https://github.com/Frosthaven/homebrew-aeroplace/archive/refs/tags/v.0.0.8.tar.gz"
 
   # regenerate SHA256 with this format for your release download:
   # curl -L https://github.com/Frosthaven/aeroplace/archive/refs/tags/v0.0.2.tar.gz | shasum -a 256
-  sha256 "e59810f59142db19d52f8a2dc0441db13ba91295fce30f4ca4d7066c17bebdbe" 
+  sha256 "1ae8c98e7e8a6660b302d6a82c5dedf2b4bac4530b043ecf392bf5d4caf09f3f"
   
   license "MIT"
 
