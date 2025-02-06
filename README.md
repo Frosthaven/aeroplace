@@ -58,7 +58,7 @@ aeroplace -w 1 -a 'WezTerm';
 """
 exec-and-forget \
 aeroplace -w 2 -a 'Slack'; \
-aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left' \
+aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left'; \
 aeroplace -w 2 -a 'Obsidian' -m 'move right';
 """,
 
