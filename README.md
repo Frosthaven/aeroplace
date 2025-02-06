@@ -72,10 +72,10 @@ aeroplace -w 3 -a 'ForkLift';
 
 - [x] Support getopt parameters
 - [ ] Extend parameters
-    - [ ] Add `-c` (execute command) as an alternative to `-a` (launch app)
     - [ ] Add `-m` to move window up|down|left|right
     - [ ] Add `-j` to join window up|down|left|right
     - [ ] Add `-s` to smart resize up and down
+    - [ ] Add `-c` (execute command) as an alternative to `-a` (launch app)
     - [ ] Add `--if-monitor` conditional flag
     - [ ] Add `--if-network` conditional flag
 - [ ] Improve window and title detection
