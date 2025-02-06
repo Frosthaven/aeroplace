@@ -44,9 +44,8 @@ requires `--window-id`.
 ## Example
 
 ```toml
-# aeroplace workspace composition - each workspace builds in its own
-# parallel process
 after-startup-command = [
+# aeroplace workspace composition
 """
 exec-and-forget \
 aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
