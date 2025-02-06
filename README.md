@@ -30,7 +30,8 @@ brew upgrade aeroplace
 #   this text in its title before considering the application launched (useful
 #   in cases like discord which have a launch screen)
 # - modifyCommand (optional): A valid aerospace window modification, e.g. `move left`
-#   after-startup-command = [
+
+after-startup-command = [
 
 # aeroplace workspace composition - we load our primary workspace last
 # so that it is easy to put the focus at the end of the load sequence
