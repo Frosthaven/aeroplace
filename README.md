@@ -30,7 +30,7 @@ aeroplace -w `<workspace>` -a `<application>` [-t `<title>` -m `<modifyCommand>`
 - title (optional): If provided, the command will wait until the application has
     this text in its title before considering the application launched (useful
     in cases like discord which have a launch screen)
-- modifyCommand (optional): A valid aerospace window modification, e.g. 'move left'
+- modifyCommand (optional): A valid aerospace window modification, e.g. `move left`
 
 ```bash
 # Launch Slack and wait for the title to include '- Slack'
