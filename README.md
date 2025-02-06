@@ -10,6 +10,13 @@ brew tap frosthaven/aeroplace
 brew install aeroplace
 ```
 
+## Updating
+
+```bash
+brew update
+brew upgrade aeroplace
+```
+
 ## Usage
 
 aeroplace -w `<workspace>` -a `<application>` [-t `<title>`]
