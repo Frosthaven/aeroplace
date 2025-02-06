@@ -3,9 +3,9 @@
 helpFunction()
 {
    echo ""
-   echo "Usage: $0 -w workspaceID -a appPath [-t titleContent]"
+   echo "Usage: $0 -w workspaceID -a appName [-t titleContent]"
    echo -e "\t-w The ID of the workspace to move the app to (0-9,a-z)"
-   echo -e "\t-a The path to the app to open, e.g. '/Applications/Google Chrome.app'"
+   echo -e "\t-a The name of the app file to open, e.g. 'Google Chrome'"
    echo -e "\t-t The title content to look for, which indicates the is loaded"
    exit 1 # Exit script after printing help
 }
@@ -14,23 +14,20 @@ while getopts "w:a:t:" opt
 do
    case "$opt" in
       w ) workspace="$OPTARG" ;;
-      a ) app_path="$OPTARG" ;;
+      a ) app_name="$OPTARG" ;;
       t ) title_content="$OPTARG" ;;
       ? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
    esac
 done
 
 # Print helpFunction if workspace or app_path are empty
-if [ -z "$workspace" ] || [ -z "$app_path" ]
+if [ -z "$workspace" ] || [ -z "$app_name" ]
 then
    echo "Some or all of the parameters are empty";
    helpFunction
 fi
 
-app_name=$(basename $app_path)
-app_name="${app_name%.*}"
-
-open -a "$app_path"
+open -a "$app_name"
 
 timeout=10
 interval=1
