@@ -46,29 +46,29 @@ after-startup-command = [
 """
 exec-and-forget \
 aeroplace -w 1 -a 'Zen Browser'; \
-aeroplace -w 1 -a 'WezTerm'
+aeroplace -w 1 -a 'WezTerm';
 """,
 
 # workspace 2
 """
 exec-and-forget \
 aeroplace -w 2 -a 'Slack'; \
-aerospace join left --window-id $(aeroplace -w 2 -a 'Discord' -t '- Discord'); \
-aerospace move right --window-id $(aeroplace -w 2 -a 'Obsidian' -t 'Obsidian');
+aerospace join left --window-id $(aeroplace -w 2 -a 'Discord' -t 'Friends'); \
+aerospace move right --window-id $(aeroplace -w 2 -a 'Obsidian');
 """,
 
 # workspace 3
 """
 exec-and-forget \
 aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
-aeroplace -w 3 -a 'ForkLift'
+aeroplace -w 3 -a 'ForkLift';
 """
 ]
 ```
 
 ## @todo
 
-- [ ] Refactor to support named parameters
-- [ ] Add support for startinglications OR commands
+- [x] Refactor to support named parameters
+- [ ] Add support for starting applications OR commands
 - [ ] Add parameters for move, join, and resize on new windows
-- [ ] Add support for multiple windows of the samelication type
+- [ ] Add support for multiple windows of the same application type
