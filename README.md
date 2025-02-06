@@ -25,7 +25,7 @@ will allow you to feed the ID into other aerospace commands if desired.*
 
 ```bash
 # Launch Slack and wait for the title to include '- Slack'
-aeroplace '1' 'Slack' '- Slack'
+aeroplace -w '1' -a 'Slack' -t '- Slack'
 ```
 
 ## Example
