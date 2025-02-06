@@ -25,8 +25,10 @@ brew upgrade aeroplace
 
 ```toml
 after-startup-command = [
+
 # aeroplace workspace composition - we load our primary workspace last
 # so that it is easy to put the focus at the end of the load sequence
+
 """
 exec-and-forget \
 aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
@@ -37,6 +39,7 @@ aeroplace -w 2 -a 'Obsidian' -m 'move right'; \
 aeroplace -w 1 -a 'Zen Browser'; \
 aeroplace -w 1 -a 'WezTerm' -m 'focus'; \
 """,
+
 ]
 ```
 
