@@ -1,9 +1,9 @@
 # aeroplace
 
-THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
-
 A utility for generating deterministic [Aerospace](https://github.com/nikitabobko/AeroSpace)
 application layouts on launch.
+
+THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
 
 ## Installation
 
