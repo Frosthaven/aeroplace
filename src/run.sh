@@ -6,11 +6,11 @@
 helpFunction()
 {
    echo ""
-   echo "Usage: $0 -w workspaceID -a appName [-t titleContent -m modifyCommand]"
+   echo "Usage: $0 -w workspaceID -a appName [-t titleContent -m modifyCommands]"
    echo -e "\t-w The ID of the workspace to move the app to (0-9,a-z)"
    echo -e "\t-a The name of the app file to open, e.g. 'Google Chrome'"
    echo -e "\t-t The title content to look for, which indicates the app is loaded"
-   echo -e "\t-m A valid aerospace window modification, e.g. 'move left'"
+   echo -e "\t-m Aerospace window commands, e.g. 'move left, resize smart -100'"
    exit 1 # Exit script after printing help
 }
 
@@ -34,8 +34,6 @@ fi
 
 # FUNCTIONS *******************************************************************
 # *****************************************************************************
-# we need a modify function that takes in app_window_id, workspace, and the
-# modify_command as arguments
 
 function modifyWindow() {
   app_window_id="$1"
@@ -45,10 +43,10 @@ function modifyWindow() {
   # move the window to the appropriate workspace
   aerospace move-node-to-workspace --window-id $app_window_id $workspace > /dev/null 2>&1
 
-  # run the modify command if it exists
-  if [[ ! -z "$modify_command" ]]; then
-    aerospace $modify_command --window-id $app_window_id > /dev/null 2>&1
-  fi
+  IFS=',' read -r -a modify_commands <<< "$modify_command"
+  for command in "${modify_commands[@]}"; do
+    aerospace $command --window-id $app_window_id > /dev/null 2>&1
+  done
 }
 
 # RUN *************************************************************************

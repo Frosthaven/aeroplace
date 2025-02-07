@@ -21,29 +21,26 @@ brew upgrade aeroplace
 
 ## Usage
 
-```sh
-aeroplace -w workspaceID -a appName [-t titleContent -m modifyCommand]
+```shell
+aeroplace -w workspaceID -a appName [-t titleContent -m modifyCommands]
         -w The ID of the workspace to move the app to (0-9,a-z)
         -a The name of the app file to open, e.g. 'Google Chrome'
         -t The title content to look for, which indicates the app is loaded
-        -m A valid aerospace window modification, e.g. 'move left'
+        -m Aerospace window commands, e.g. 'move left, resize smart -100'
 ```
 
 ```toml
 after-startup-command = [
 
-# aeroplace workspace composition - we load our primary workspace last
-# so that it is easy to put the focus at the end of the load sequence
-
 """
 exec-and-forget \
-aeroplace -w 3 -a 'Microsoft Outlook' -t ' • '; \
-aeroplace -w 3 -a 'ForkLift'; \
+aeroplace -w 1 -a 'Zen Browser'; \
+aeroplace -w 1 -a 'WezTerm' -m 'resize smart -300, focus'; \
+aeroplace -w 2 -a 'Microsoft Outlook' -t ' • '; \
 aeroplace -w 2 -a 'Slack'; \
 aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left'; \
-aeroplace -w 2 -a 'Obsidian' -m 'move right'; \
-aeroplace -w 1 -a 'Zen Browser'; \
-aeroplace -w 1 -a 'WezTerm' -m 'focus'; \
+aeroplace -w 3 -a 'ForkLift'; \
+aeroplace -w 3 -a 'Obsidian'; \
 afplay /System/Library/Sounds/Sosumi.aiff; \
 """,
 
@@ -55,7 +52,7 @@ afplay /System/Library/Sounds/Sosumi.aiff; \
 - [x] Support getopt parameters
 - [ ] Extend parameters
     - [x] Add `-m` to enable modification on window creation (join-with, move, etc)
-        - [ ] Allow multiple commands in `-m` (comma separated)
+        - [x] Allow multiple commands in `-m` (comma separated)
     - [ ] Add `-c` (execute command) as an alternative to `-a` (launch app)
     - [ ] Add `--if-monitor` conditional flag
     - [ ] Add `--if-network` conditional flag
