@@ -55,6 +55,7 @@ afplay /System/Library/Sounds/Sosumi.aiff; \
 - [x] Support getopt parameters
 - [ ] Extend parameters
     - [x] Add `-m` to enable modification on window creation (join-with, move, etc)
+        - [ ] Allow multiple commands in `-m` (comma separated)
     - [ ] Add `-c` (execute command) as an alternative to `-a` (launch app)
     - [ ] Add `--if-monitor` conditional flag
     - [ ] Add `--if-network` conditional flag
