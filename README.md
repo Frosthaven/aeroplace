@@ -5,7 +5,7 @@ application layouts on launch.
 
 THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
 
-## What It Does
+## How it works
 
 Each call to this utility will:
 
