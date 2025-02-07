@@ -38,16 +38,19 @@ fi
 # modify_command as arguments
 
 function modifyWindow() {
+  sleep 0.5
   app_window_id="$1"
   workspace="$2"
   modify_command="$3"
 
   # move the window to the appropriate workspace
   aerospace move-node-to-workspace --window-id $app_window_id $workspace > /dev/null 2>&1
+  sleep 0.5
 
   # run the modify command if it exists
   if [[ ! -z "$modify_command" ]]; then
     aerospace $modify_command --window-id $app_window_id > /dev/null 2>&1
+    sleep 0.5
   fi
 }
 
