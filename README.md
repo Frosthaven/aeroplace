@@ -37,7 +37,7 @@ exec-and-forget \
 aeroplace -w 1 -a 'Zen Browser'; \
 aeroplace -w 1 -a 'WezTerm' -m 'resize smart -300, focus'; \
 aeroplace -w 2 -a 'Microsoft Outlook' -t ' • '; \
-aeroplace -w 2 -a 'Slack' -m 'rezise smart -100'; \
+aeroplace -w 2 -a 'Slack' -m 'resize smart -100'; \
 aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left'; \
 aeroplace -w 3 -a 'ForkLift'; \
 aeroplace -w 3 -a 'Obsidian'; \
