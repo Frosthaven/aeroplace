@@ -43,6 +43,8 @@ function modifyWindow() {
   # move the window to the appropriate workspace
   aerospace move-node-to-workspace --window-id $app_window_id $workspace > /dev/null 2>&1
 
+  sleep 0.5
+
   IFS=',' read -r -a modify_commands <<< "$modify_command"
   for command in "${modify_commands[@]}"; do
     aerospace $command --window-id $app_window_id > /dev/null 2>&1
