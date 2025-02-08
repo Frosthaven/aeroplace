@@ -63,6 +63,8 @@ afplay /System/Library/Sounds/Sosumi.aiff; \
 ]
 ```
 
+## Sequence of Events
+
 This is what the sequence of events looks like for the workspace 2 placements above (`-w 2`):
 
 ![image](https://github.com/user-attachments/assets/a4029aca-5c3d-4c7e-9eb0-f1ec181093cd)
