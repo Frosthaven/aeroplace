@@ -75,7 +75,7 @@ aeroplace -w 2 -a 'Slack';
 aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left, resize width -100';
 ```
 
-![image](https://github.com/user-attachments/assets/a4029aca-5c3d-4c7e-9eb0-f1ec181093cd)
+![image](https://github.com/user-attachments/assets/b15b8dda-20be-4f67-b03c-5cb58242d807)
 
 ## Current Limitations
 
