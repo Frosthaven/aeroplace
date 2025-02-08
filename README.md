@@ -62,7 +62,7 @@ afplay /System/Library/Sounds/Sosumi.aiff; \
 Using the workspace 2 assignments above (`-w 2`), this is what the sequence of events would
 look like:
 
-![image](https://github.com/user-attachments/assets/afcd750f-525a-4bf3-b6ba-33ad7adb61b0)
+![image](https://github.com/user-attachments/assets/a4029aca-5c3d-4c7e-9eb0-f1ec181093cd)
 
 ## Roadmap
 
