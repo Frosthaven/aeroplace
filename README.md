@@ -75,7 +75,7 @@ This utility currently has the following limitations:
 
 - Only one instance of an application can be handled. This will be changed in the future to support multiple windows from one application.
 - Values for title matching shouldn't include the application name. For now aeroplace uses a quick and dirty grep command that can get
-  confused by titles including the application name.
+  confused when trying to find the application's name inside of the title content.
 
 ## Roadmap
 
