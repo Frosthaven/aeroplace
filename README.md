@@ -46,21 +46,24 @@ after-startup-command = [
 
 """
 exec-and-forget \
+
 aeroplace -w 1 -a 'Zen Browser'; \
 aeroplace -w 1 -a 'WezTerm' -m 'resize smart -300, focus'; \
+
 aeroplace -w 2 -a 'Microsoft Outlook' -t ' • '; \
 aeroplace -w 2 -a 'Slack'; \
 aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left, resize width -100'; \
+
 aeroplace -w 3 -a 'ForkLift'; \
 aeroplace -w 3 -a 'Obsidian'; \
+
 afplay /System/Library/Sounds/Sosumi.aiff; \
 """
 
 ]
 ```
 
-Using the workspace 2 assignments above (`-w 2`), this is what the sequence of events would
-look like:
+This is what the sequence of events looks like for the workspace 2 placements above (`-w 2`):
 
 ![image](https://github.com/user-attachments/assets/a4029aca-5c3d-4c7e-9eb0-f1ec181093cd)
 
