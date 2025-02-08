@@ -67,7 +67,13 @@ that requires a window id.
 
 ## Sequence of Events
 
-This is what the sequence of events looks like for the workspace 2 placements above (`-w 2`):
+Using the commands from above for workspace 2, we can illustrate the sequence of events:
+
+```sh
+aeroplace -w 2 -a 'Microsoft Outlook' -t ' • '; 
+aeroplace -w 2 -a 'Slack';
+aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left, resize width -100';
+```
 
 ![image](https://github.com/user-attachments/assets/a4029aca-5c3d-4c7e-9eb0-f1ec181093cd)
 
