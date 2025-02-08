@@ -5,19 +5,6 @@ application layouts on launch.
 
 THIS IS CURRENTLY IN PRE-RELEASE AND SUBJECT TO CHANGE
 
-## How it works
-
-Each call to this utility will:
-
-- Create an application window on the designated workspace
-- Wait for the window to load (and optionally wait for the title to contain specific text)
-- Manipulate the window using aerospace commands
-- Exit, outputting the window ID as a response
-
-This allows you to build a deterministic layout of applications by placing several calls
-in sequence. You can also use the output of this utility's call as the input to any command
-that requires a window id.
-
 ## Installation
 
 Install
@@ -63,6 +50,20 @@ afplay /System/Library/Sounds/Sosumi.aiff; \
 
 ]
 ```
+
+## How it works
+
+Each call to this utility will:
+
+- Create an application window on the designated workspace
+- Wait for the window to load (and optionally wait for the title to contain specific text)
+- Manipulate the window using aerospace commands
+- Exit, outputting the window ID as a response
+
+This allows you to build a deterministic layout of applications by placing several calls
+in sequence. You can also use the output of this utility's call as the input to any command
+that requires a window id.
+
 
 ## Sequence of Events
 
