@@ -73,8 +73,9 @@ This is what the sequence of events looks like for the workspace 2 placements ab
 
 This utility currently has the following limitations:
 
-- Only one instance of an application can be handled with title matching calls. This will be changed in the future.
-- For now aeroplace uses a quick and dirty grep command that can get confused when trying to find the application's name inside of the title content. Avoid placing the application's name in the optional `-t` flag.
+- Only one instance of an application can be handled at a time. This will change.
+- Avoid placing the application's name in the optional `-t` flag, as the search
+  comparison gets confused and will return a false positive. This will change.
 
 ## Roadmap
 
