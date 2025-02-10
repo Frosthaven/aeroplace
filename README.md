@@ -82,8 +82,8 @@ aeroplace -w 2 -a 'Discord' -t 'Friends' -m 'join-with left, resize width -100';
 This utility currently has the following limitations:
 
 - Only one instance of an application can be handled at a time. This will change.
-- Avoid placing the application's name in the optional `-t` flag, as the search
-  comparison gets confused and will return a false positive. This will change.
+- Avoid using *only* the application's name in the optional `-t` flag, as it will always
+  match, even if the window hasn't been spawned yet.
 
 ## Roadmap
 
